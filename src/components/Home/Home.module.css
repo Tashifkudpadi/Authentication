@@ -1,0 +1,80 @@
+.header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0 37.7px;
+  margin-bottom: 2.5rem;
+  margin-top: 2.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+.left {
+  padding: 3.5rem 5rem;
+  color: rgb(32, 35, 37);
+}
+
+.left h1 {
+  font-size: 2.5rem;
+  line-height: 1.35;
+}
+
+.left h4 {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.right {
+  display: flex;
+  justify-content: flex-start;
+}
+.right img {
+  width: 490px;
+  height: 400px;
+  margin: 2.5rem 2.5rem;
+}
+
+.right img:hover {
+  transition: all 0.4s ease;
+  transform: scale(0.9);
+}
+
+.highlight {
+  position: relative;
+  font-size: 3rem;
+  color: #174722;
+}
+
+.highlight::after {
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.7;
+  transform: scale(1.07, 1.05) skewX(-15deg);
+  background-color: #00b712;
+  background-image: linear-gradient(315deg, #00b712 0%, #5aff15 74%);
+}
+
+.btn {
+  display: inline-block;
+  border: none;
+  width: 95px;
+  color: rgb(80, 85, 90);
+  font-size: 0.8rem;
+  border-bottom: 1px solid #33e25c;
+  padding-bottom: 2px;
+  cursor: pointer;
+}
+.btn:hover {
+  color: rgb(55, 223, 128);
+  font-size: 0.811rem;
+}

@@ -1,0 +1,127 @@
+@import "../../global.scss";
+@import url("https://fonts.googleapis.com/css2?family=Style+Script&display=swap");
+
+.main {
+  height: 200px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 50px;
+  font-size: 20px;
+  font-weight: 500;
+  padding-top: 2rem;
+  width: 60%;
+  margin: 5rem 0 0 25%;
+}
+
+.main h2 {
+  color: #00b712;
+  text-transform: uppercase;
+}
+.main p {
+  font-size: 2rem;
+  color: black;
+}
+.testimonials {
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+
+  .arrow {
+    height: 40px;
+    position: absolute;
+    cursor: pointer;
+
+    @include mobile {
+      display: none;
+    }
+
+    &.left {
+      left: 180px;
+      transform: rotateY(180deg);
+      filter: invert(100%);
+    }
+    &.right {
+      filter: invert(100%);
+
+      right: 180px;
+    }
+  }
+
+  .slider {
+    height: 350px;
+    display: flex;
+    position: absolute;
+    left: 0;
+    transition: all 1s ease-out;
+
+    @include mobile {
+      height: 100vh;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .container {
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .items {
+        width: 800px;
+        height: 110%;
+        border-radius: 20px;
+        overflow: hidden;
+        font-family: "Poppins", sans-serif;
+        padding: 1rem;
+
+        i {
+          color: rgb(60, 145, 60);
+        }
+
+        h2 {
+          width: 80%;
+        }
+        @include mobile {
+          width: 80%;
+          height: 150px;
+          margin: 15px 0;
+        }
+
+        .profile {
+          display: grid;
+          grid-template-columns: 0fr 0.5fr;
+
+          img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+          }
+
+          .titles {
+            display: flex;
+            flex-direction: column;
+            margin-left: 1.4rem;
+          }
+          h4 {
+            font-size: 20px;
+            font-weight: 700;
+            background-color: rgb(238, 225, 208);
+            padding-left: 0.7rem;
+          }
+          h5 {
+            font-size: 18px;
+            font-weight: 500;
+            font-family: "Poppins", sans-serif;
+            position: relative;
+            bottom: 2rem;
+            padding-left: 0.7rem;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+.features {
+  height: 300px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 45px;
+  margin-left: 25%;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.features h2 {
+  color: #00b712;
+  text-transform: uppercase;
+}
+
+.features p {
+  font-size: 2rem;
+  color: black;
+}
