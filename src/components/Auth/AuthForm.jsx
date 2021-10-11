@@ -61,7 +61,13 @@ function AuthForm(props) {
       <form onSubmit={submitHandler}>
         <div className="control">
           <label htmlFor="email">Email</label>
-          <input type="text" name="email" id="email" ref={emailInputRef} />
+          <input
+            type="text"
+            name="email"
+            id="email"
+            ref={emailInputRef}
+            autocomplete="off"
+          />
         </div>
         <div className="control">
           <label htmlFor="password">Password</label>
@@ -70,6 +76,7 @@ function AuthForm(props) {
             name="password"
             id="password"
             ref={passwordInputRef}
+            autocomplete="off"
           />
         </div>
         <div className="actions">
